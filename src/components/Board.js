@@ -45,17 +45,24 @@ class Board extends React.Component {
           [0, 4, 8],
           [2, 4, 6],
         ];
+
         for (let i = 0; i < lines.length; i++) {
+
           const [a, b, c] = lines[i];
+
           if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+
             return squares[a];
+
           }
+
         }
+
         return null; 
+
     }
 
     render() {
-
 
         const winner=  this.calculateWinner(this.state.squares);
 
@@ -72,31 +79,27 @@ class Board extends React.Component {
       return (
         <div>
           
-          <div className="gb">
-                <div className="board-row">
+          <div className="m-0 p-0">
+                <div className="h-[5rem]">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
                     {this.renderSquare(2)}
                 </div>
-                <div className="board-row">
+                <div className="h-[5rem]">
                     {this.renderSquare(3)}
                     {this.renderSquare(4)}
                     {this.renderSquare(5)}
                 </div>
-                <div className="board-row">
+                <div className="h-[5rem]">
                     {this.renderSquare(6)}
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
                 </div>
-                <div className="status">{status}</div>
+                <div className="">{status}</div>
             </div>
         </div>
       );
     }
-
-   
-
-
   }
 
   export default Board;

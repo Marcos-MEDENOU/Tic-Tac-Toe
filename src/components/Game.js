@@ -25,14 +25,14 @@ class Game extends React.Component {
         // const winner = calculateWinner(current.squares)
 
       return (
-        <div className="game">
-          <div className="">
+        <div className="p-0">
+          <div className="p-0">
             <NavBar/>
           </div>
-          <div className="game-board">
+          <div className="w-[500px] h-[300px]">
             <Board />
           </div>
-          <div className="game-info">
+          <div className="">
             <div>{/* status */}</div>
             <ol>{/* TODO */}</ol>
           </div>
